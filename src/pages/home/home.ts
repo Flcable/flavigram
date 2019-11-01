@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { LoginPage } from '../login/login';
+import { PhotosPage } from '../photos/photos';
 
 
 @Component({
@@ -14,8 +14,8 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController) {
-    this.photosTab = LoginPage;
-    this.profileTab = LoginPage;
+    this.photosTab = PhotosPage;
+    this.profileTab = PhotosPage;
 
   }
 
