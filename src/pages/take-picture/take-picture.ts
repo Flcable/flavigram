@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, ModalController } from 'ionic-angular';
+import { SendPhotoPage } from '../send-photo/send-photo';
 
 @Component({
   selector: 'page-take-picture',
@@ -8,9 +9,14 @@ import { ViewController } from 'ionic-angular';
 export class TakePicturePage {
 
   constructor(
-    private viewCtrl: ViewController
+    private viewCtrl: ViewController,
+    private modalCtrl: ModalController
     ) {
 
+  }
+  takePicture(){
+    let modal = this.modalCtrl.create(SendPhotoPage);
+    modal.present();
   }
   dismiss(){
     this.viewCtrl.dismiss();
